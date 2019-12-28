@@ -2,3 +2,6 @@
 */.idea
 *.class
 *.log
+*.bloop
+*.metals
+*.DS_Store

@@ -13,7 +13,6 @@ object Bloxorz extends App {
     val startPos = Pos(1,3)
     val goal = Pos(5,8)
   }
-
   println(InfiniteLevel.solution)
 
   /**
