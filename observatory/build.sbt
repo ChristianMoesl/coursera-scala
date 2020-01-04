@@ -29,7 +29,7 @@ libraryDependencies ++= Seq(
   "co.fs2" %% "fs2-io" % "1.0.5",
   "org.scalacheck" %% "scalacheck" % "1.13.5" % Test,
   "com.novocode" % "junit-interface" % "0.11" % Test,
-  "com.storm-enroute" %% "scalameter" % "0.17" % Test,
+  "com.storm-enroute" %% "scalameter" % "0.17",
   "org.scalactic" %% "scalactic" % "3.1.0",
   "org.scalatest" %% "scalatest" % "3.1.0" % Test
 )
