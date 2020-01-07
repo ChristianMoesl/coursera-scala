@@ -2,7 +2,6 @@ package observatory
 
 import com.sksamuel.scrimage.{Image, Pixel}
 import math.{sqrt, pow, sin, asin, cos, acos, abs, toRadians}
-import org.scalameter.measure
 
 /**
   * 2nd milestone: basic visualization
@@ -14,10 +13,8 @@ object Visualization extends VisualizationInterface {
     * @param location Location where to predict the temperature
     * @return The predicted temperature at `location`
     */
-  var i = 0
+  //var i = 0
   def predictTemperature(temperatures: Iterable[(Location, Temperature)], location: Location): Temperature = {
-    //def weight(x: Location, xi: Location) = 1.0D / math.pow(distance(x, xi), 2.0D)
-
     val toleranceDistance = 1.0D //km
 
     val tempsWithDistances = temperatures.map{ case (loc, temp) =>
@@ -59,7 +56,6 @@ object Visualization extends VisualizationInterface {
 
     earthRadius * centralAngle(p1, p2)
   }
-
 
   /**
     * @param points Pairs containing a value and its associated color

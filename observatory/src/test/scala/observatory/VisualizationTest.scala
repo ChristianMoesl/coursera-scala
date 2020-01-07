@@ -53,45 +53,32 @@ trait VisualizationTest extends MilestoneSuite {
     //distance(vienna, viennaAntipode) should be < (6 * earthRadius)
   //}
 
-  val temperatureColors = List(
-    (60.0D,Color(255,255,255)),
-    (32.0D,Color(255,0,0)),
-    (12.0D,Color(255,255,0)),
-    (0.0D, Color(0,255,255)),
-    (-15.0D,Color(0,0,255)),
-    (-27.0D,Color(255,0,255)),
-    (-50.0D,Color(33,0,107)),
-    (-60.0D,Color(0,0,0))
-  )
+  //val temperatureColors = List(
+    //(60.0D,Color(255,255,255)),
+    //(32.0D,Color(255,0,0)),
+    //(12.0D,Color(255,255,0)),
+    //(0.0D, Color(0,255,255)),
+    //(-15.0D,Color(0,0,255)),
+    //(-27.0D,Color(255,0,255)),
+    //(-50.0D,Color(33,0,107)),
+    //(-60.0D,Color(0,0,0))
+  //)
   
-  @Test def `visualize image`(): Unit = {
-    val records = locateTemperatures(1975, "/stations.csv", "/1975.csv")
-    val averages = locationYearlyAverageRecords(records)
-
-    val image = visualize(averages, temperatureColors)
-
-    image.output(new java.io.File("target/some-image.png"))
-    
-    println(averages.size)
-
-  }
-
-  @Test def `prediction is fast enough`(): Unit = {
-    val records = locateTemperatures(1975, "/stations.csv", "/1975.csv")
-    val averages = locationYearlyAverageRecords(records)
-
-    val time = measure { predictTemperature(averages, Location(90.0D, 90.0D)) }
-
-    time.value should be <= 3000.0
-  }
-
-
   //@Test def `visualize image`(): Unit = {
     //val records = locateTemperatures(1975, "/stations.csv", "/1975.csv")
     //val averages = locationYearlyAverageRecords(records)
 
-    //val time = measure { visualize(averages, temperatureColors) } 
+    //val image = visualize(averages, temperatureColors)
 
-    //time should be <= 3000
+    //image.output(new java.io.File("target/some-image.png"))
+  //}
+
+  //@Test def `prediction is fast enough`(): Unit = {
+    //val records = locateTemperatures(1975, "/stations.csv", "/1975.csv")
+    //val averages = locationYearlyAverageRecords(records)
+
+    //val time = measure { predictTemperature(averages, Location(90.0D, 90.0D)) }
+
+    //time.value should be <= 3000.0
   //}
 }

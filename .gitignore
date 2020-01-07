@@ -5,3 +5,6 @@
 *.bloop
 *.metals
 *.DS_Store
+*.dat
+*.csv
+*.txt
